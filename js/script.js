@@ -12,37 +12,33 @@ let printedWord = prompt('Please, Enter a word!');
 
 
 // funzione per parole palindrome
-function itsPalindrome(printedWord){
+function itsPalindrome(printedPalindrome){
     
     //convertiamo la parola in minuscolo
-    printedWord = printedWord.toLowerCase();
+    printedPalindrome = printedPalindrome.toLowerCase();
 
     //variabile parola invertita
     let invertedWord = "";
 
     // inizializzo il contatore per il ciclo while
-    let index = printedWord.lenght - 1;
+    let i = printedWord.length -1;  // il problema era questo, invesivo printedPalindrome e non prendeva il .lenght ( lenght fondamentale!!)
 
-    //Ciclo while
-    while (index >= invertedWord) {
-
-        invertedWord += printedWord[index];
-
-        //decrementiamo il contatore.
-        index--;
+    //ciclo for
+    for (i; i >= 0; i--){
+        invertedWord += printedPalindrome[i];
     }
-    // mettiamo a confronto la parola normale e quella invertita
-    if (printedWord === invertedWord) {
-        return true;  // è palindroma
+    if (printedPalindrome === invertedWord){
+        return true; // palindromo corretto
+
     }
     else{
-        return false;  //non è palindroma
+        return false;//palindromo errato
     }
 }
 
 //Funzione per le parole palindrome
 if (itsPalindrome(printedWord)){
-    console.log("La parola inserita E' Palindroma");
+    console.log("La parola inserita è Palindroma")
 }
 else{
     console.log("la parola inserita NON é Palindroma");
