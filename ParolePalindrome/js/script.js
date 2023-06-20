@@ -43,3 +43,6 @@ if (itsPalindrome(printedWord)){
 else{
     console.log("la parola inserita NON é Palindroma");
 }
+
+
+//
