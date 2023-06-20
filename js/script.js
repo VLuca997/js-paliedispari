@@ -6,6 +6,7 @@
 
 
 
+
 // Stampiamo un prompt che richiede una parola scritta.
 let printedWord = prompt('Please, Enter a word!');
 
@@ -17,20 +18,32 @@ function itsPalindrome(printedWord){
     printedWord = printedWord.toLowerCase();
 
     //variabile parola invertita
-    let invertedword = "";
+    let invertedWord = "";
 
     // inizializzo il contatore per il ciclo while
     let index = printedWord.lenght - 1;
 
     //Ciclo while
-    while (index >= invertedword) {
+    while (index >= invertedWord) {
 
-        invertedword += printedWord[index];
+        invertedWord += printedWord[index];
 
         //decrementiamo il contatore.
         index--;
+    }
+    // mettiamo a confronto la parola normale e quella invertita
+    if (printedWord === invertedWord) {
+        return true;  // è palindroma
+    }
+    else{
+        return false;  //non è palindroma
+    }
 }
 
+//Funzione per le parole palindrome
+if (itsPalindrome(printedWord)){
+    console.log("La parola inserita E' Palindroma");
 }
-
-console.log(printedWord);
+else{
+    console.log("la parola inserita NON é Palindroma");
+}
