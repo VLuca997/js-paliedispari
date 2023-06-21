@@ -20,7 +20,7 @@ function itsPalindrome(printedPalindrome){
     //variabile parola invertita
     let invertedWord = "";
 
-    // inizializzo il contatore per il ciclo while
+    // inizializzo il contatore per il ciclo for
     let i = printedWord.length -1;  // il problema era questo, invesivo printedPalindrome e non prendeva il .lenght ( lenght fondamentale!!)
 
     //ciclo for

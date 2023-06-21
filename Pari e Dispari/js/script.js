@@ -26,3 +26,10 @@ let somma = numberHuman + numberComputer;
 function numberPari(number) {
     return number % 2 === 0;
 }
+// dichiariamo chi vince
+if ((numberPari(somma) && human.toLowerCase() === "pari") || (!numberPari(somma) && human.toLowerCase() === "dispari")){
+    console.log("The humans WON!")
+}
+else {
+    console.log ("Cyborgs Won :( !");
+}
